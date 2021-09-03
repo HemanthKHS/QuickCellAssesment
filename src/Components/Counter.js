@@ -81,7 +81,9 @@ function Counter(){
         // setmaxValue(parseInt(e.target.value))
         // }
         setmaxValue(parseInt(e.target.value))
-        
+        if(maxValue<value){
+            setinvalid(true)
+        }
         // console.log(maxValue,value)
     }
 
@@ -107,7 +109,7 @@ function Counter(){
         <label htmlFor="initailValue">Initial Value : &nbsp;</label>
         <input id='initialValue' type="text" placeholder='enter initial  value' name='initialValue' onChange={(e) => {return handleChange(e)}}/>
         <br />
-        {invalid &&
+        {value>maxValue &&
         <div id='max-value'>Enter Value less than max value({maxValue})</div>
         }
         <label htmlFor="maxValue">Max Value &nbsp; : &nbsp;</label>
