@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Counter/>
-      <p style={{alignSelf:'baseline'}}>Note : You can also click on counter Number and edit it </p>
+      <p style={{marginTop:'20vw'}}>Note : You can also click on counter Number and edit it </p>
     </div>
   );
 }
