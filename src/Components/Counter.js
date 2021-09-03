@@ -7,6 +7,7 @@ function Counter(){
     // const [initial, setinitial] = useState(false)
     // const [ismax, setismax] = useState(false)
     const [ismin, setismin] = useState(false)
+    const [invalid, setinvalid] = useState(false)
     
     const DecreaseCount = () => {
         if (value-1>=1){
@@ -16,7 +17,7 @@ function Counter(){
             // alert('minLimit Reached')
             setismin(true)
         }
-        console.log('decrement',value)
+        // console.log('decrement',value)
     }
 
     const IncreaseCount = () => {
@@ -31,14 +32,21 @@ function Counter(){
         // else{
         //     alert('maxLimit Reached')
         // }
-        console.log('increment',value,maxValue)
+        // console.log('increment',value,maxValue)
     }
     }
 
     const handleChange = (e) => {
         if (e.target.value){
         setvalue(parseInt(e.target.value))
-        console.log(typeof(value),value)
+        // console.log(typeof(value),value)
+        if(parseInt(e.target.value)>maxValue){
+                setvalue(maxValue)
+                setinvalid(true)
+        }
+        else{
+            setinvalid(false)
+        }
         }
         else{
             setvalue('')
@@ -73,12 +81,12 @@ function Counter(){
         // setmaxValue(parseInt(e.target.value))
         // }
         setmaxValue(parseInt(e.target.value))
-        console.log(maxValue,value)
+        // console.log(maxValue,value)
     }
 
     return(
         <div className='mainDiv'>
-            <div>
+            <div className='counter-div'>
         <div id='counter'>
         <div id='counter-decrement' onClick={() => {return DecreaseCount()}}><span>-</span></div>
         <div id='counter-text-div'><input id='counter-input' type="text" value={value} onChange={(e) => {return handleChange(e)}} /></div>
@@ -98,8 +106,8 @@ function Counter(){
         <label htmlFor="initailValue">Initial Value : &nbsp;</label>
         <input id='initialValue' type="text" placeholder='enter initial  value' name='initialValue' onChange={(e) => {return handleChange(e)}}/>
         <br />
-        {value > maxValue &&
-        <div id='max-value'>Enter Value less than {maxValue}</div>
+        {invalid &&
+        <div id='max-value'>Enter Value less than max value({maxValue})</div>
         }
         <label htmlFor="maxValue">Max Value &nbsp; : &nbsp;</label>
         <input id='maxValue' type="text" placeholder='enter max value' name='maxValue' onChange={(e) => {return handleMax(e)}}/>

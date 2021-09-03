@@ -128,16 +128,25 @@ input:focus
   font-size:13px;
   margin-left: 80px;
 }
+/* .counter-div{
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto auto;
+} */
 
 @media only screen and (max-width: 600px) {
   .mainDiv{
     justify-content: center;
     margin-top: 20vh;
     display: grid;
-    justify-content: center;
-    align-content: center;
     /* grid-template-columns: auto auto; */
   }
+  .counter-div{
+    display: grid;
+    justify-content: center;
+    margin-left: 80px;
+  }
+
   #counter{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
@@ -145,10 +154,19 @@ input:focus
     border: 1px solid #B34040;
     height: 50px;
     border-radius: 7px;
-    margin-bottom: 50px;
+    justify-self: center;
+    align-self: center;
+    /* margin-bottom: 50px; */
   }
   #counter-increment span{
   font-size: 30px;
   color: white;
+}
+#initialValue{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(209, 203, 203);
+  margin-top: 50px;
 }
 }
