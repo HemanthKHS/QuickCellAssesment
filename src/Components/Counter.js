@@ -10,7 +10,7 @@ function Counter(){
     const [invalid, setinvalid] = useState(false)
     
     const DecreaseCount = () => {
-        if (value-1>=1){
+        if (value-1>=0){
             setvalue(value-1)
         }
         else{
@@ -81,6 +81,7 @@ function Counter(){
         // setmaxValue(parseInt(e.target.value))
         // }
         setmaxValue(parseInt(e.target.value))
+        
         // console.log(maxValue,value)
     }
 
