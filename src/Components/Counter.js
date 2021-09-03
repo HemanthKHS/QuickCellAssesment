@@ -7,7 +7,7 @@ function Counter(){
     // const [initial, setinitial] = useState(false)
     // const [ismax, setismax] = useState(false)
     const [ismin, setismin] = useState(false)
-    const [invalid, setinvalid] = useState(false)
+    // const [invalid, setinvalid] = useState(false)
     
     const DecreaseCount = () => {
         if (value-1>=0){
@@ -42,10 +42,10 @@ function Counter(){
         // console.log(typeof(value),value)
         if(parseInt(e.target.value)>maxValue){
                 setvalue(maxValue)
-                setinvalid(true)
+                // setinvalid(true)
         }
         else{
-            setinvalid(false)
+            // setinvalid(false)
         }
         }
         else{
@@ -81,9 +81,7 @@ function Counter(){
         // setmaxValue(parseInt(e.target.value))
         // }
         setmaxValue(parseInt(e.target.value))
-        if(maxValue<value){
-            setinvalid(true)
-        }
+        
         // console.log(maxValue,value)
     }
 
