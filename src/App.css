@@ -109,13 +109,24 @@ input:focus
   border-left: none;
   border-right: none;
   border-bottom: 1px solid rgb(209, 203, 203);
+  margin-top: 10px;
 }
 #initialValue{
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid rgb(209, 203, 203);
-  
+}
+#max-limit{
+  color:#B34040;
+  font-size:13px;
+  margin-top: 5px;
+  margin-left: -80px;
+}
+#max-value{
+  color:#B34040;
+  font-size:13px;
+  margin-left: 80px;
 }
 
 @media only screen and (max-width: 600px) {
