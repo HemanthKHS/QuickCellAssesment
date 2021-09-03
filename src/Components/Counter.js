@@ -1,11 +1,11 @@
-import React,{  useState,useEffect} from "react";
+import React,{  useState} from "react";
 
 function Counter(){
 
     const [value, setvalue] = useState(1)
     const [maxValue, setmaxValue] = useState(1000)
-    const [initial, setinitial] = useState(false)
-    const [ismax, setismax] = useState(false)
+    // const [initial, setinitial] = useState(false)
+    // const [ismax, setismax] = useState(false)
     
     const DecreaseCount = () => {
         if (value-1>=1){
@@ -18,7 +18,7 @@ function Counter(){
     }
 
     const IncreaseCount = () => {
-        if (value==''){
+        if (value===''){
             setvalue(1)
         }
         else{
@@ -43,17 +43,17 @@ function Counter(){
         }
     }
     
-    const handleInitial = (e) => {
-        if(e.target.value){
-        setvalue(parseInt(e.target.value))
-        setinitial(true)
-        console.log(maxValue,value)
-        }
-        else{
-            e.target.value=1
-            setvalue(1)
-        }
-    }
+    // const handleInitial = (e) => {
+    //     if(e.target.value){
+    //     setvalue(parseInt(e.target.value))
+    //     // setinitial(true)
+    //     console.log(maxValue,value)
+    //     }
+    //     else{
+    //         e.target.value=1
+    //         setvalue(1)
+    //     }
+    // }
     const handleMax = (e) => {
         //     if (parseInt(e.target.value) > value){
         // setmaxValue(parseInt(e.target.value))
