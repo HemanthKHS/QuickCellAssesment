@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+/* 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.mainDiv{
+  justify-content: center;
+  margin-top: 20vh;
+  display: flex;
+  /* grid-template-columns: auto auto; */
+}
+#counter{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  width: 180px;
+  border: 1px solid #B34040;
+  height: 50px;
+  border-radius: 7px;
+  margin-right: 100px;
+}
+
+#counter-input{
+  width: 40px;
+}
+
+#counter-increment{
+  border-left: 1px solid #B34040;
+  background-color: #B34040;
+  cursor: pointer;
+  border-radius:0px 5px 5px 0px ;
+}
+#counter-decrement{
+  border-right: 1px solid #B34040;
+  cursor: pointer;
+}
+#counter-increment span{
+  font-size: 30px;
+  color: white;
+}
+#counter-decrement span{
+  font-size: 30px;
+  color: #B34040;
+}
+
+#counter-text-div{
+background-color:#FBE9E9 ;
+}
+
+
+
+#counter-text-div input[type=text], select {
+  width: 100%;
+  height: 100%;
+  background-color:#FBE9E9 ;
+  /* display: inline-block; */
+  box-sizing: border-box;
+  border: none;
+  color:#B34040 ;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+} 
+
+input:focus
+{
+    border: 1px solid #B34040;
+    box-shadow: 0 0 3px gray;
+    outline-offset: 0px;
+    outline: none;
+}
+
+#maxValue{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(209, 203, 203);
+}
+#initialValue{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(209, 203, 203);
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .mainDiv{
+    justify-content: center;
+    margin-top: 20vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* grid-template-columns: auto auto; */
+  }
+  #counter{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    width: 180px;
+    border: 1px solid #B34040;
+    height: 50px;
+    border-radius: 7px;
+    margin-bottom: 50px;
+  }
+  #counter-increment span{
+  font-size: 30px;
+  color: white;
+}
+}
